@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Debbie ❤️</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #ff758c, #ffb199);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        overflow: hidden;
+    }
+    .card {
+        background: rgba(0,0,0,0.35);
+        padding: 35px;
+        border-radius: 20px;
+        max-width: 420px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        opacity: 0;
+        transform: scale(0.9);
+        transition: all 1s ease;
+    }
+    .show {
+        opacity: 1;
+        transform: scale(1);
+    }
+    button {
+        padding: 15px 25px;
+        border: none;
+        border-radius: 30px;
+        background: #fff;
+        color: #ff758c;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+    .heart {
+        font-size: 32px;
+        margin-top: 20px;
+        animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+</style>
+</head>
+<body>
+
+<button onclick="reveal()">Tap to open ❤️</button>
+
+<div class="card" id="message">
+    <h1>Happy Birthday Debbie ❤️</h1>
+    <p>
+        Debbie… I know this message might be the last thing you expected from me today.<br><br>
+
+        I’ve been thinking about everything, and the truth is… I’m really sorry. 
+        I hurt you, and you didn’t deserve that at all.<br><br>
+
+        You’re special to me in a way I can’t even fully explain, and it hurts knowing I’m the reason things changed.<br><br>
+
+        But today isn’t about my mistake… it’s about you.<br><br>
+
+        I hope today brings you smiles, peace, and everything good you deserve. 
+        And even if things don’t go back to how they were, just know you meant something real to me.<br><br>
+
+        Happy Birthday Debbie. You deserve the world.
+    </p>
+    <div class="heart">❤️</div>
+</div>
+
+<audio id="music" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function reveal() {
+    document.querySelector("button").style.display = "none";
+    const card = document.getElementById("message");
+    card.classList.add("show");
+    document.getElementById("music").play();
+}
+</script>
+
+</body>
+</html>
